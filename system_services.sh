@@ -18,6 +18,7 @@ addgroup -g 8377 docker_env
 chown :docker_env /etc/container_environment.sh /etc/container_environment.json
 chmod 640 /etc/container_environment.sh /etc/container_environment.json
 ln -s /etc/container_environment.sh /etc/profile.d/
+echo ". /etc/container_environment.sh" >> /root/.bashrc
 
 ## Install runit.
 apk --no-cache add runit
