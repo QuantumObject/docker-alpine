@@ -35,6 +35,10 @@ chmod +x /etc/service/cron/run
 ## Often used tools.
 apk --no-cache add psmisc
 
+#fix some small problem
+echo `. /etc/alpine-release; echo ${DISTRIB_CODENAME/*, /}` >> /etc/container_environment/DISTRIB_CODENAME
+
+
 #cleanup
 rm -rf /build
 rm -rf /tmp/* /var/tmp/*
