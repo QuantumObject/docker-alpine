@@ -36,7 +36,7 @@ chmod +x /etc/service/cron/run
 apk --no-cache add psmisc
 
 #fix some small problem
-echo `. /etc/alpine-release; echo ${DISTRIB_CODENAME/*, /}` >> /etc/container_environment/DISTRIB_CODENAME
+cat /etc/alpine-release >> /etc/container_environment/DISTRIB_CODENAME
 
 
 #cleanup
