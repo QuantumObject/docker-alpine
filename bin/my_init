@@ -18,7 +18,8 @@ import_envvars () {
     FILE=`basename $file`
     if [ $override_existing_environment == true ] || !( env | grep -q $FILE)
     then
-      export eval $FILE=`cat $file`
+      set $FILE=`cat $file`
+      export eval $FILE
     fi
  done
 }
